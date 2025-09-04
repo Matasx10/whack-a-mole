@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div>
+      <div id="form">
+        <h2>WHACK A MOLE</h2>
+        <input placeholder="Type your name" />
+        <button disabled="true" id="form-next">NEXT</button>
+      </div>
+
+      <div id="intro">
+        <h2>GAME RULES</h2>
+        <h4>Smash as many moles as you can!</h4>
+        <h4>
+          <span class="name">Player</span> best score:
+          <span class="bestScore">0</span>
+        </h4>
+        <button id="intro-next">NEXT</button>
+      </div>
+
+      <div id="game">
+        <div class="center-flex">
+          <h2>Score: <span class="score">0</span></h2>
+          <h2>Time: <span id="timer"></span>s</h2>
+          <button id="startButton">Start Game</button>
+          <button disabled="true" id="pauseButton">Pause</button>
+        </div>
+
+        <div id="game-grid-container"></div>
+
+        <img id="hammer" src="./assets/hammer.png" />
+
+        <div id="pauseOverlay">
+          <button id="resumeButton">Resume game</button>
+        </div>
+      </div>
+
+      <div id="end">
+        <h2>RESULTS</h2>
+        <h4>SCORE: <span class="score">0</span></h4>
+        <button id="tryAgainButton">Try again</button>
+      </div>
+
+      <div id="preloader">
+        <div>
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/constants.js"></script>
+    <script src="./src/utils.js"></script>
+    <script src="./src/code.js"></script>
+  </body>
+</html>

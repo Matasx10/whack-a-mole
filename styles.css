@@ -1,0 +1,138 @@
+@keyframes diglettPopUp {
+  0% {
+    transform: translateX(-50%) translateY(100%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(30%);
+  }
+}
+
+@keyframes diglettPopDown {
+  0% {
+    transform: translateX(-50%) translateY(30%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(100%);
+  }
+}
+
+body {
+  background-color: green;
+}
+
+#game-grid-container {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3/2;
+  position: relative;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, black 70%, #3b2a1a 100%);
+}
+
+#preloader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+#preloader > div {
+  margin: 0 auto;
+  overflow: hidden;
+  height: 30px;
+  width: 70%;
+  border-radius: 10px;
+  border: 2px black solid;
+}
+
+#progress-bar {
+  height: 100%;
+  background-color: green;
+}
+
+.mole-img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(100%);
+  width: 120%;
+}
+
+.pop-up {
+  animation-iteration-count: 1;
+  animation: diglettPopUp 0.4s forwards ease-out;
+}
+
+.pop-down {
+  animation-iteration-count: 1;
+  animation: diglettPopDown 0.4s forwards ease-out;
+}
+
+#form,
+#intro,
+#end {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hammer {
+  position: absolute;
+  pointer-events: none;
+  transform-origin: center bottom;
+  width: 30vw;
+  height: auto;
+  max-width: 140px;
+  max-height: 180px;
+}
+
+.paused * {
+  animation-play-state: paused !important;
+}
+
+button,
+input {
+  padding: 10px 30px;
+  border-radius: 7px;
+  font-weight: 500;
+  outline: none;
+  border: black 2px solid;
+  margin: 20px;
+}
+
+#pauseOverlay {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

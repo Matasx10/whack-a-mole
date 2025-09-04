@@ -1,0 +1,1 @@
+- npx serve . (preload works) or open html
