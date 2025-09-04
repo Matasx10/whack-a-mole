@@ -24,3 +24,4 @@
 - Add sound on smash.
 - Add `boom` efect on successful smash.
 - Refactor? Add options for area size. Add options for difficulty - create constants for interval speed and animation speed.
+- Also seperate code more. Make seperate files - moleManager.js, storage.js, uiManager.js, preloader.js, inputHandler.js - something like that so that not 1 file is full of everything.
